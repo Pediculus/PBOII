@@ -9,19 +9,34 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 3. [Conclusion](#conclusion)
 
 ## Kapan Digunakan
-1. Jika sebuah sistem memiliki banyak kelas atau subsistem yang harus digunakan bersama, Facade dapat menyediakan interface tunggal yang lebih mudah dipahami.
-   Kasus: Sistem Pemesanan Tiket Online
-   Dalam sistem pemesanan tiket pesawat, ada beberapa subsistem yang harus berinteraksi, seperti
-   1. Pencarian Penerbangan (FlightSearch)
-   2. Pemesanan Kursi (SeatReservation)
-   3. Pembayaran (PaymentProcessing)
-   4. Konfirmasi Tiket (TicketConfirmation)
-   
-   Jika pengguna harus berinteraksi dengan semua subsistem ini secara langsung, maka sistem menjadi terlalu kompleks dan sulit digunakan. Sehingga solusi dengan facade adalah dengan membuat kelas TicketBookingFacade yang menyediakan satu metode bookFlight(customer, flightID, paymentDetails).
+### 1. Jika sebuah sistem memiliki banyak kelas atau subsistem yang harus digunakan bersama
+Facade dapat menyediakan interface tunggal yang lebih mudah dipahami.
 
-   Mengurangi ketergantungan antara klien dan subsistem dengan menyembunyikan implementasi subsistem, facade membantu memisahkan kode klien dari perubahan yang mungkin terjadi pada subsistem tersebut.
+#### Kasus: Sistem Pemesanan Tiket Online
+Dalam sistem pemesanan tiket pesawat, ada beberapa subsistem yang harus berinteraksi, seperti:
 
-   Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
+1. **Pencarian Penerbangan** (`FlightSearch`)
+2. **Pemesanan Kursi** (`SeatReservation`)
+3. **Pembayaran** (`PaymentProcessing`)
+4. **Konfirmasi Tiket** (`TicketConfirmation`)
+
+Jika pengguna harus berinteraksi dengan semua subsistem ini secara langsung, maka sistem menjadi terlalu kompleks dan sulit digunakan. 
+
+**Solusi dengan Facade**: Membuat kelas `TicketBookingFacade` yang menyediakan satu metode:
+```java
+public class TicketBookingFacade {
+    public void bookFlight(Customer customer, String flightID, PaymentDetails paymentDetails) {
+        FlightSearch.search(flightID);
+        SeatReservation.reserveSeat(customer, flightID);
+        PaymentProcessing.processPayment(paymentDetails);
+        TicketConfirmation.sendConfirmation(customer);
+    }
+}
+```
+
+2. Mengurangi ketergantungan antara klien dan subsistem dengan menyembunyikan implementasi subsistem, facade membantu memisahkan kode klien dari perubahan yang mungkin terjadi pada subsistem tersebut.
+
+3. Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
 
 ## Section 1
 Describe the first section here.
