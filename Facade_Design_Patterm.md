@@ -34,9 +34,9 @@ public class TicketBookingFacade {
 }
 ```
 
-2. Mengurangi ketergantungan antara klien dan subsistem dengan menyembunyikan implementasi subsistem, facade membantu memisahkan kode klien dari perubahan yang mungkin terjadi pada subsistem tersebut.
+### 2. Mengurangi ketergantungan antara klien dan subsistem dengan menyembunyikan implementasi subsistem, facade membantu memisahkan kode klien dari perubahan yang mungkin terjadi pada subsistem tersebut.
 
-3. Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
+### 3. Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
 
 ## Section 1
 Describe the first section here.
