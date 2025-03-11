@@ -55,8 +55,8 @@ Kekurangan dari design pattern Facade:
 Summarize the document here.
 
 ## References
-- [Link 1](https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
-- [Link 2](https://www.google.co.id/books/edition/Mastering_Design_Patterns_in_Java/oK8pEQAAQBAJ?hl=id&gbpv=1&dq=design+patterns&pg=PA8&printsec=frontcover)
+- [Design Pattern Facade](https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
+- [Design Pattern](https://www.google.co.id/books/edition/Mastering_Design_Patterns_in_Java/oK8pEQAAQBAJ?hl=id&gbpv=1&dq=design+patterns&pg=PA8&printsec=frontcover)
 
 ## Additional Notes
 - Bullet point 1
