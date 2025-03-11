@@ -5,8 +5,8 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 
 ## Table of Contents
 1. [Kapan Digunakan](#kapan-digunakan)
-2. [Kelebihan](#section-1)
-3. [Kekurangan](#section-2)
+2. [Kelebihan](#kelebihan)
+3. [Kekurangan](#kekurangan)
 4. [Conclusion](#conclusion)
 
 ## Kapan Digunakan
