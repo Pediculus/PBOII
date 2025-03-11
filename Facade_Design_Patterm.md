@@ -5,8 +5,9 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 
 ## Table of Contents
 1. [Kapan Digunakan](#kapan-digunakan)
-2. [Section 1](#section-1)
-3. [Conclusion](#conclusion)
+2. [Kelebihan](#section-1)
+3. [Kekurangan](#section-2)
+4. [Conclusion](#conclusion)
 
 ## Kapan Digunakan
 ### 1. Jika sebuah sistem memiliki banyak kelas atau subsistem yang harus digunakan bersama
@@ -38,24 +39,24 @@ public class TicketBookingFacade {
 
 ### 3. Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
 
-## Section 1
-Describe the first section here.
+## Kelebihan
+Kelebihan dari design pattern Facade:
+### 1. Membuat interface yang jauh lebih sederhana bagi klien
+### 2. Memungkinkan perubahan subsistem tanpa mempengaruhi klien
+### 3. Mempermudah maintanance dan perubahan sistem tanpa mempengaruhi kode klien
 
-### Subsection 1.1
-Details about the subsection.
-
-## Section 2
-Describe the second section here.
-
-### Subsection 2.1
-More details.
+## Kekurangan
+Kekurangan dari design pattern Facade:
+### 1. Meningkatkan kompleksitas kode terutama pada bagian abstraksi
+### 2. Fleksibilitas yang berkurang bagi klien yang ingin mengakses fungsi diluar Facade
+### 3. Tidak diperlukan bagi sistem yang tergolong sederhana
 
 ## Conclusion
 Summarize the document here.
 
 ## References
-- [Link 1](https://example.com)
-- [Link 2](https://example.com)
+- [Link 1](https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
+- [Link 2](https://www.google.co.id/books/edition/Mastering_Design_Patterns_in_Java/oK8pEQAAQBAJ?hl=id&gbpv=1&dq=design+patterns&pg=PA8&printsec=frontcover)
 
 ## Additional Notes
 - Bullet point 1
