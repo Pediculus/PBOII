@@ -45,7 +45,89 @@ Kekurangan dari design pattern Facade:
 ### 3. Tidak diperlukan bagi sistem yang tergolong sederhana
 
 ## Contoh Kode
-Summarize the document here.
+Terdapat `HomeAutomationFacade` yang menyederhanakan interaksi dengan beberapa subsistem `Lights`, `AirConditioner`, dan `Television` dengan menyediakan satu antarmuka untuk menyalakan atau mematikan semuanya sekaligus. Facade design pattern menyembunyikan logika yang kompleks dan memberikan antarmuka yang lebih bersih bagi klien.
+``` java
+// Subsystem 1
+class Lights {
+    void turnOn() { System.out.println("Lights are ON"); }
+    void turnOff() { System.out.println("Lights are OFF"); }
+}
+
+// Subsystem 2
+class AirConditioner {
+    void turnOn() { System.out.println("Air Conditioner is ON"); }
+    void turnOff() { System.out.println("Air Conditioner is OFF"); }
+}
+
+// Subsystem 3
+class Television {
+    void turnOn() { System.out.println("Television is ON"); }
+    void turnOff() { System.out.println("Television is OFF"); }
+}
+
+// Facade
+class HomeAutomationFacade {
+    private Lights lights;
+    private AirConditioner ac;
+    private Television tv;
+
+    public HomeAutomationFacade() {
+        this.lights = new Lights();
+        this.ac = new AirConditioner();
+        this.tv = new Television();
+    }
+
+    void activate() {
+        lights.turnOn();
+        ac.turnOn();
+        tv.turnOn();
+        System.out.println("Home is ready!");
+    }
+
+    void deactivate() {
+        lights.turnOff();
+        ac.turnOff();
+        tv.turnOff();
+        System.out.println("Home is shut down!");
+    }
+}
+
+// Client
+public class FacadePatternDemo {
+    public static void main(String[] args) {
+        HomeAutomationFacade home = new HomeAutomationFacade();
+        
+        System.out.println("--- Activating Home ---");
+        home.activate();
+        
+        System.out.println("\n--- Deactivating Home ---");
+        home.deactivate();
+    }
+}
+```
+### Subsystem Class (`Lights`, `AirConditioner`, `Television`)
+Setiap kelas menyediakan metode untuk menyalakan dan mematikan perangkat masing-masing.
+### Facade Class (`HomeAutomationFacade`)
+Bertindak sebagai perantara yang menggabungkan semua fungsi dari subsistem dan menyediakan metode sederhana untuk menyalakan atau mematikan semuanya sekaligus.
+### Klien (`FacadePatternDemo`)
+Menggunakan `HomeAutomationFacade` untuk berinteraksi dengan perangkat tanpa harus memanggil setiap subsistem secara langsung.
+
+### Output
+``` java
+--- Activating Home ---
+Lights are ON
+Air Conditioner is ON
+Television is ON
+Home is ready!
+
+--- Deactivating Home ---
+Lights are OFF
+Air Conditioner is OFF
+Television is OFF
+Home is shut down!
+```
+![output](https://cdn.discordapp.com/attachments/1039426101866405940/1349346532062662676/Screenshot_2025-03-12_183956.png?ex=67d2c462&is=67d172e2&hm=40f49d82345ff13249c127564586a1209a859a52dc1b23a718bb09131a95c65d&)
+
 
 ## References
 - [Design Pattern Facade](https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
