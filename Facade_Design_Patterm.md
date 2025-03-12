@@ -35,14 +35,24 @@ Dengan **Facade Pattern**, dibuat sebuah antarmuka (`SmartHomeFacade`) yang meng
 ## Kelebihan
 Kelebihan dari design pattern Facade:
 ### 1. Membuat interface yang jauh lebih sederhana bagi klien
+Interface yang akan ditampilkan ke klien hanya berupa tampilan sederhana dan bukan isi dari seluruh sistem dan subsistem yang dibangun
+
 ### 2. Memungkinkan perubahan subsistem tanpa mempengaruhi klien
+Klien hanya berinteraksi dengan antarmuka yang ditampilkan pada Facade, sehingga sistem dapat dimodifikasi tanpa mempengaruhi akses klien
+
 ### 3. Mempermudah maintanance dan perubahan sistem tanpa mempengaruhi kode klien
+Sistem dapat mengubah fungsi dan meenjalankan maintanance tanpa perlu mengbah kode ataupun antarmuka klien
 
 ## Kekurangan
 Kekurangan dari design pattern Facade:
 ### 1. Meningkatkan kompleksitas kode terutama pada bagian abstraksi
+Penambahan Facade juga ikut menambahkan kompleksitas pada abstraksi karena menambah layer baru
+
 ### 2. Fleksibilitas yang berkurang bagi klien yang ingin mengakses fungsi diluar Facade
+Facade secara tidak langsung memblokir / membatasi klien untuk melakukan suatu perintah / aksi diluar fungsionalitas Facade
+
 ### 3. Tidak diperlukan bagi sistem yang tergolong sederhana
+Pada sistem yang sederhana, Facade hanya berupa over-engineering yang hanya menyembunyikan proses yang masih sederhana
 
 ## Contoh Desain Facade Methode
 
