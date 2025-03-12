@@ -132,12 +132,3 @@ Home is shut down!
 ## References
 - [Design Pattern Facade](https://www.geeksforgeeks.org/facade-design-pattern-introduction/)
 - [Design Pattern](https://www.google.co.id/books/edition/Mastering_Design_Patterns_in_Java/oK8pEQAAQBAJ?hl=id&gbpv=1&dq=design+patterns&pg=PA8&printsec=frontcover)
-
-## Additional Notes
-- Bullet point 1
-- Bullet point 2
-
-**Bold Text** and *Italic Text* example.
-
-
-
