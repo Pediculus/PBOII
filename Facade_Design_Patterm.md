@@ -10,34 +10,25 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 4. [Conclusion](#conclusion)
 
 ## Kapan Digunakan
-### 1. Jika sebuah sistem memiliki banyak kelas atau subsistem yang harus digunakan bersama
-Facade dapat menyediakan interface tunggal yang lebih mudah dipahami.
+### 1. Menyederhanakan Sistem yang Kompleks (Sistem Pemesanan Tiket Pesawat)
+Dalam sistem pemesanan tiket pesawat, terdapat berbagai layanan yang harus diakses oleh pengguna, seperti pencarian penerbangan, pemrosesan pembayaran, dan penerbitan tiket. Jika pengguna harus berinteraksi langsung dengan masing-masing layanan, sistem akan menjadi lebih rumit dan sulit digunakan.
 
-#### Kasus: Sistem Pemesanan Tiket Online
-Dalam sistem pemesanan tiket pesawat, ada beberapa subsistem yang harus berinteraksi, seperti:
+Dengan menggunakan **Facade Pattern**, sebuah kelas khusus (misalnya `TicketBookingFacade`) bertindak sebagai antarmuka tunggal yang menangani semua proses di belakang layar. Pengguna hanya perlu memanggil satu metode (`bookTicket()`), tanpa perlu memahami bagaimana setiap layanan bekerja di dalamnya.
 
-1. **Pencarian Penerbangan** (`FlightSearch`)
-2. **Pemesanan Kursi** (`SeatReservation`)
-3. **Pembayaran** (`PaymentProcessing`)
-4. **Konfirmasi Tiket** (`TicketConfirmation`)
 
-Jika pengguna harus berinteraksi dengan semua subsistem ini secara langsung, maka sistem menjadi terlalu kompleks dan sulit digunakan. 
 
-**Solusi dengan Facade**: Membuat kelas `TicketBookingFacade` yang menyediakan satu metode:
-```java
-public class TicketBookingFacade {
-    public void bookFlight(Customer customer, String flightID, PaymentDetails paymentDetails) {
-        FlightSearch.search(flightID);
-        SeatReservation.reserveSeat(customer, flightID);
-        PaymentProcessing.processPayment(paymentDetails);
-        TicketConfirmation.sendConfirmation(customer);
-    }
-}
-```
+### 2. Meningkatkan Keterbacaan dan Manajemen Kode (Aplikasi E-Commerce - Checkout)
+Dalam aplikasi e-commerce, ada banyak aspek yang harus dikelola saat pelanggan melakukan checkout, seperti pengecekan stok, penerapan diskon, dan perhitungan pajak. Jika setiap bagian ini dipanggil secara langsung oleh klien, kode akan menjadi lebih panjang, berantakan, dan sulit dikelola.
 
-### 2. Mengurangi ketergantungan antara klien dan subsistem dengan menyembunyikan implementasi subsistem, facade membantu memisahkan kode klien dari perubahan yang mungkin terjadi pada subsistem tersebut.
+Dengan **Facade Pattern**, dibuat sebuah antarmuka tunggal (`CheckoutFacade`) yang menangani semua langkah tersebut. Klien cukup memanggil `processCheckout()`, yang secara otomatis akan memeriksa stok, menghitung harga setelah diskon, dan menambahkan pajak. Ini membuat kode lebih bersih, mudah dipahami, dan lebih mudah dikelola.
 
-### 3. Saat kode terlalu kompleks dan sulit dipahami karena memiliki banyak dependensi langsung dengan subsistem.
+
+### 3. Mengurangi Ketergantungan antara Klien dan Subsistem (Sistem Manajemen Rumah Pintar)
+Dalam sistem rumah pintar, berbagai perangkat seperti lampu, AC, dan kamera keamanan harus dikendalikan. Jika pengguna harus mengaktifkan atau menonaktifkan setiap perangkat satu per satu, sistem akan menjadi lebih sulit digunakan.
+
+Dengan **Facade Pattern**, dibuat sebuah antarmuka (`SmartHomeFacade`) yang mengelola semua perangkat sekaligus. Misalnya, pengguna cukup memanggil `activateNightMode()`, yang secara otomatis akan mematikan lampu, mengatur suhu AC, dan mengaktifkan kamera keamanan. Dengan cara ini, klien tidak perlu memahami detail cara kerja setiap perangkat, sehingga sistem menjadi lebih fleksibel dan mudah digunakan.
+
+
 
 ## Kelebihan
 Kelebihan dari design pattern Facade:
