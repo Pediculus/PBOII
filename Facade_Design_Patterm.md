@@ -3,7 +3,7 @@
 ## Introduction
 Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang berarti "depan" atau "muka". Facade adalah design pattern struktural yang menyediakan interface yang disederhanakan untuk sebuah library, framework, atau class yang kompleks lainnya. Sebagai sebuah kelas, Facade menyediakan antarmuka sederhana ke subsistem kompleks yang berisi banyak komponen. Meskipun Facade menawarkan fungsionalitas yang lebih terbatas dibandingkan dengan bekerja langsung dengan subsistem, ia tetap mencakup fitur-fitur yang hanya dibutuhkan oleh klien.
 
-![GitHub Logo]([github.githubassets.com/images/modules/logos_page/GitHub-Mark.png](https://media.geeksforgeeks.org/wp-content/uploads/20240118172253/facade-method-banner.jpg))
+![GitHub Logo](https://media.geeksforgeeks.org/wp-content/uploads/20240118172253/facade-method-banner.jpg)
 
 ## Table of Contents
 1. [Kapan Digunakan](#kapan-digunakan)
