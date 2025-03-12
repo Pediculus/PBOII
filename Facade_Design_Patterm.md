@@ -7,7 +7,7 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 1. [Kapan Digunakan](#kapan-digunakan)
 2. [Kelebihan](#kelebihan)
 3. [Kekurangan](#kekurangan)
-4. [Conclusion](#conclusion)
+4. [Contoh Kode](#contoh-kode)
 
 ## Kapan Digunakan
 ### 1. Menyederhanakan Sistem yang Kompleks (Sistem Pemesanan Tiket Pesawat)
@@ -42,7 +42,7 @@ Kekurangan dari design pattern Facade:
 ### 2. Fleksibilitas yang berkurang bagi klien yang ingin mengakses fungsi diluar Facade
 ### 3. Tidak diperlukan bagi sistem yang tergolong sederhana
 
-## Conclusion
+## Contoh Kode
 Summarize the document here.
 
 ## References
