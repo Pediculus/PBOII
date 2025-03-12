@@ -12,9 +12,6 @@ Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang 
 4. [Contoh Kode](#contoh-kode)
 
 ## Kapan Digunakan
-
-![GitHub Logo](https://media.geeksforgeeks.org/wp-content/uploads/20240118172403/Component-of-Facade-Method-Design-Pattern.jpg).
-
 ### 1. Menyederhanakan Sistem yang Kompleks (Sistem Pemesanan Tiket Pesawat)
 Dalam sistem pemesanan tiket pesawat, terdapat berbagai layanan yang harus diakses oleh pengguna, seperti pencarian penerbangan, pemrosesan pembayaran, dan penerbitan tiket. Jika pengguna harus berinteraksi langsung dengan masing-masing layanan, sistem akan menjadi lebih rumit dan sulit digunakan.
 
@@ -46,6 +43,10 @@ Kekurangan dari design pattern Facade:
 ### 1. Meningkatkan kompleksitas kode terutama pada bagian abstraksi
 ### 2. Fleksibilitas yang berkurang bagi klien yang ingin mengakses fungsi diluar Facade
 ### 3. Tidak diperlukan bagi sistem yang tergolong sederhana
+
+## Contoh Desain Facade Methode
+
+![GitHub Logo](https://media.geeksforgeeks.org/wp-content/uploads/20240118172434/Problem-Statement-of-Facade-Method-Design-Pattern.jpg).
 
 ## Contoh Kode
 Terdapat `HomeAutomationFacade` yang menyederhanakan interaksi dengan beberapa subsistem `Lights`, `AirConditioner`, dan `Television` dengan menyediakan satu antarmuka untuk menyalakan atau mematikan semuanya sekaligus. Facade design pattern menyembunyikan logika yang kompleks dan memberikan antarmuka yang lebih bersih bagi klien.
