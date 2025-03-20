@@ -1,4 +1,8 @@
 # Facade Design Pattern
+## Anggota
+1. Lim Hak Pheng             (23100004)
+2. Felix Hartono Chiesa      (23100005)
+3. Juven Fidelis Chiesa      (23100017)
 
 ## Introduction
 Facade (/fəˈsɑːd/) merupakan sebuah kata dari bahasa Prancis "façade" yang berarti "depan" atau "muka". Facade adalah design pattern struktural yang menyediakan interface yang disederhanakan untuk sebuah library, framework, atau class yang kompleks lainnya. Sebagai sebuah kelas, Facade menyediakan antarmuka sederhana ke subsistem kompleks yang berisi banyak komponen. Meskipun Facade menawarkan fungsionalitas yang lebih terbatas dibandingkan dengan bekerja langsung dengan subsistem, ia tetap mencakup fitur-fitur yang hanya dibutuhkan oleh klien.
