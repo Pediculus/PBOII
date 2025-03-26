@@ -46,7 +46,7 @@ public class Products {
                     firstLine = false;
                     continue;
                 }
-                if (counter >= 100) break; // Hentikan setelah 10 data
+                if (counter >= 100) break;
 
                 String[] values = line.split(",");
                 String invoiceNo = values[0];
@@ -71,7 +71,7 @@ public class Products {
 
             System.out.println("Dataset berhasil dibaca! Jumlah produk yang dianalisis: " + productList.size());
 
-            // Menampilkan 10 produk pertama
+            // Menampilkan 100 produk pertama
             for (Product p : productList) {
                 System.out.println(p.invoiceNo + ", " + p.stockCode + ", " + p.description + ", " + p.quantity + ", " + p.unitPrice + ", " + p.country);
             }
