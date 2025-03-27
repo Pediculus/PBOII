@@ -15,7 +15,7 @@ class Product {
     String country;
 
     // Constructor to initialize the Product object
-    public Product(String invoiceNo, String stockCode, String description, int quantity, Date invoiceDate, double unitPrice, String customerID, String country) {
+    public Daftarproduk(String invoiceNo, String stockCode, String description, int quantity, Date invoiceDate, double unitPrice, String customerID, String country) {
         this.invoiceNo = invoiceNo;
         this.stockCode = stockCode;
         this.description = description;
