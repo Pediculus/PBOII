@@ -80,11 +80,11 @@ public class Products {
             System.out.println("Total negara unik: " + uniqueCountries.size());
 
             // Menampilkan total produk terjual berdasarkan StockCode
-            System.out.println("Total produk terjual berdasarkan StockCode:");
+            System.out.println("Total produk terjual berdasarkan StockCode: ");
             totalSoldByStockCode.forEach((key, value) -> System.out.println(key + ": " + value));
 
             // Menampilkan total pendapatan per negara
-            System.out.println("Total pendapatan per negara:");
+            System.out.println("Total pendapatan per negara: ");
             revenueByCountry.forEach((key, value) -> System.out.println(key + ": " + value));
 
         } catch (Exception e) {
