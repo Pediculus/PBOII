@@ -16,4 +16,47 @@ Perbedaan utamanya adalah:
 
 Contoh penggunaan:
 ```java
-Thread.sleep(1000); // Thread akan berhenti selama 1 detik
+public class ThreadExample {
+    public static void main(String[] args) {
+        // Membuat thread pertama
+        Thread thread1 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Menampilkan pesan bahwa Thread 1 dimulai
+                    System.out.println("Thread 1 mulai...");
+                    // Thread 1 tidur selama 2 detik (2000 milidetik)
+                    Thread.sleep(2000); // Tidur selama 2000 milidetik (2 detik)
+                    // Menampilkan pesan bahwa Thread 1 selesai setelah 2 detik
+                    System.out.println("Thread 1 selesai setelah 2 detik");
+                } catch (InterruptedException e) {
+                    // Jika Thread 1 terganggu, tangani exception ini
+                    System.out.println("Thread 1 terganggu");
+                }
+            }
+        });
+
+        // Membuat thread kedua
+        Thread thread2 = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    // Menampilkan pesan bahwa Thread 2 dimulai
+                    System.out.println("Thread 2 mulai...");
+                    // Thread 2 tidur selama 1 detik (1000 milidetik)
+                    Thread.sleep(1000); // Tidur selama 1000 milidetik (1 detik)
+                    // Menampilkan pesan bahwa Thread 2 selesai setelah 1 detik
+                    System.out.println("Thread 2 selesai setelah 1 detik");
+                } catch (InterruptedException e) {
+                    // Jika Thread 2 terganggu, tangani exception ini
+                    System.out.println("Thread 2 terganggu");
+                }
+            }
+        });
+
+        // Menjalankan kedua thread
+        thread1.start(); // Thread 1 mulai dieksekusi
+        thread2.start(); // Thread 2 mulai dieksekusi
+    }
+}
+
