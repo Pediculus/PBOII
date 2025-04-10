@@ -2,7 +2,7 @@ import java.awt.*;
 import java.util.*;
 import javax.swing.*;
 
-public class queez {
+public class Banner {
     public static void main(String[] args) {
         // Create the main window (JFrame)
         JFrame frame = new JFrame("Banner");
